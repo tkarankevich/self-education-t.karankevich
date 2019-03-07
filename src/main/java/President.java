@@ -3,5 +3,6 @@ public class President {
 
         System.out.println("I like to rule");
         System.out.println("new I like to rule");
+        System.out.println("new2 I like to rule");
     }
 }
