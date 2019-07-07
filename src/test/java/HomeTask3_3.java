@@ -38,9 +38,9 @@ public class HomeTask3_3 {
             button.click();
             new FluentWait<>(driver)
                     .withTimeout(Duration.ofSeconds(10))
-                    .pollingEvery(Duration.ofSeconds(200))
+                    .pollingEvery(Duration.ofSeconds(2))
                     .withMessage("NoSuchElementException")
-                    .until(driver -> driver.findElement(By.xpath("//div[@id='finish']//button")).isDisplayed());
+                    .until(driver -> driver.findElement(By.xpath("//div[@id='finish']")).isDisplayed());
         }
         Assert.assertEquals(driver.findElement(By.xpath("//div[@id='finish']")).getText(), "Hello World!");
 

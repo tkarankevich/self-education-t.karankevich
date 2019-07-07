@@ -33,7 +33,7 @@ public class HomeTask3_2 {
         buttonRemove.click();
         new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
-                .pollingEvery(Duration.ofSeconds(200))
+                .pollingEvery(Duration.ofSeconds(2))
                 .withMessage("NoSuchElementException")
                 .until(driver -> driver.findElement(By.xpath("//form[@id='checkbox-example']//p")).isDisplayed());
         Assert.assertTrue(driver.findElements(By.xpath("//form[@id='checkbox-example']//input[@type='checkbox']")).isEmpty());
@@ -46,7 +46,7 @@ public class HomeTask3_2 {
 
         new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
-                .pollingEvery(Duration.ofSeconds(200))
+                .pollingEvery(Duration.ofSeconds(2))
                 .withMessage("NoSuchElementException")
                 .until(driver -> driver.findElement(By.xpath("//form[@id='checkbox-example']//input[@type='checkbox']")).isDisplayed());
         Assert.assertFalse(driver.findElements(By.xpath("//form[@id='checkbox-example']//input[@type='checkbox']")).isEmpty());

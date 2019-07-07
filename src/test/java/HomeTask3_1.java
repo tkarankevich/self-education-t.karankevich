@@ -39,7 +39,7 @@ public class HomeTask3_1 {
             addonMenu.click();
             new FluentWait<>(driver)
                     .withTimeout(Duration.ofSeconds(10))
-                    .pollingEvery(Duration.ofSeconds(200))
+                    .pollingEvery(Duration.ofSeconds(2))
                     .withMessage("Element not interactable")
                     .until(driver -> addonMenuItems.isDisplayed());
         }
